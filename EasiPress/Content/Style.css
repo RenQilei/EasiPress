@@ -1,0 +1,34 @@
+﻿
+
+.article-block {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background: #eee;
+}
+
+.article-block-title {
+    font-size: 2.25em;
+}
+
+.article-block-detail {
+
+}
+
+.article-block-author {
+
+}
+
+.article-block-time {
+
+}
+
+.article-block-main {
+    margin: 10px 0;
+    line-height: 1.25em;
+    font-weight: lighter;
+    font-size: 1.25em;
+}
+
+.article-block-attribute {
+    
+}

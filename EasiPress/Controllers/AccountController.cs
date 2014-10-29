@@ -83,7 +83,7 @@ namespace EasiPress.Controllers
                 if (result.Succeeded)
                 {
                     await SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Admin");//跳转至Admin/Index
                 }
                 else
                 {

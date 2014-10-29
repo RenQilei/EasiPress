@@ -10,6 +10,8 @@ namespace EasiPress.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "12345";
+
             return View();
         }
 

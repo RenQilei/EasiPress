@@ -2,62 +2,66 @@
 
 namespace EasiPress.Models
 {
+    // 暂时不明
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
-        [Display(Name = "用户名")]
+        [Display(Name = "User name")]
         public string UserName { get; set; }
     }
 
+    // 用户设置新密码
     public class ManageUserViewModel
     {
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "当前密码")]
+        [Display(Name = "Current password")]
         public string OldPassword { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "{0} 必须至少包含 {2} 个字符。", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "{0} must contains at least {2} characters.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "新密码")]
+        [Display(Name = "New password")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "确认新密码")]
-        [Compare("NewPassword", ErrorMessage = "新密码和确认密码不匹配。")]
+        [Display(Name = "Again password")]
+        [Compare("NewPassword", ErrorMessage = "Passwords twice are different.")]
         public string ConfirmPassword { get; set; }
     }
 
+    // 用户登录
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "用户名")]
+        [Display(Name = "User name")]
         public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "密码")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Display(Name = "记住我?")]
+        [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
 
+    // 用户注册
     public class RegisterViewModel
     {
         [Required]
-        [Display(Name = "用户名")]
+        [Display(Name = "User name")]
         public string UserName { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "{0} 必须至少包含 {2} 个字符。", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "{0} must contains at least {2} characters.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "密码")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "确认密码")]
-        [Compare("Password", ErrorMessage = "密码和确认密码不匹配。")]
+        [Display(Name = "Again password")]
+        [Compare("Password", ErrorMessage = "Passwords twice are different.")]
         public string ConfirmPassword { get; set; }
     }
 }
